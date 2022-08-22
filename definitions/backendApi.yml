@@ -1,0 +1,145 @@
+openapi: "3.0.0"
+info:
+  title: Backend
+  description: Backend
+  version: "1.0.0"
+paths:
+  /api/getall:
+    get:
+      description: add new movie
+      parameters:
+        - $ref: "#/components/parameters/X-correlationid"
+      responses:
+        '200' :
+          description: '"200 ok"'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/responses'
+        '400' :
+          description: Bad Request
+          content :
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response'
+        '500' :
+          description: Internal Server Error
+  /api/delete:
+    delete:
+      description: add new movie
+      parameters:
+        - $ref: "#/components/parameters/X-correlationid"
+      responses:
+        '200' :
+          description: '"200 ok"'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/responses'
+        '400' :
+          description: Bad Request
+          content :
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response'
+        '500' :
+          description: Internal Server Error
+  /api/update:
+    post:
+      description: add new movie
+      parameters:
+        - $ref: "#/components/parameters/X-correlationid"
+      responses:
+        '200' :
+          description: '"200 ok"'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/responses'
+        '400' :
+          description: Bad Request
+          content :
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response'
+        '500' :
+          description: Internal Server Error
+
+  /api/add:
+    put:
+      description: add new movie
+      parameters:
+        - $ref: "#/components/parameters/X-correlationid"
+      requestBody:
+        description: "Request Payload"
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/addRequest'
+      responses:
+        '200' :
+          description: '"200 ok"'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/responses'
+        '400' :
+          description: Bad Request
+          content :
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response'
+        '500' :
+          description: Internal Server Error
+components:
+  schemas:
+    addRequest: 
+      type: object
+      required: 
+        - name
+        - rating
+        - cast
+        - genre
+        - releaseDate
+      properties:
+        name: 
+          type: string
+          example: 'vikram'
+        rating: 
+          type: string
+          example : '9.8'
+        cast : 
+          type: array
+          items: 
+            type: string
+            example: 'Kamal Haasan'
+        genre :
+          type: string
+          example: 'thriller'
+        releaseDate:
+          type: string
+          pattern: "([0-9]{2})-(?:[0-9]{2})-([0-9]{4})"
+          example: "02-02-2022"
+
+    response:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "success or Failure"
+          description: 'Status of the code'
+    responses:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "success or Failure"
+          description: 'Status of the code'
+  parameters:
+    X-correlationid:
+      name: x-correlationid
+      in: header
+      required: true
+      schema:
+        type: string
