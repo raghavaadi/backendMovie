@@ -1,0 +1,735 @@
+{
+	"info": {
+		"_postman_id": "87194433-645c-496e-80a2-73fa07f57476",
+		"name": "Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "local",
+			"item": [
+				{
+					"name": "CRUD",
+					"item": [
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-correlationid",
+										"value": "12345",
+										"type": "default"
+									},
+									{
+										"key": "headers",
+										"value": "ss",
+										"type": "default"
+									},
+									{
+										"key": "Cookie",
+										"value": "session_token=953cd161-5f2a-4d91-ac3f-1d7b24298c25; Path=/; Expires=Mon, 22 Aug 2022 20:45:28 GMT",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"releaseDate\": \"12-12-2022\",\r\n        \"genre\": \"thriller\",\r\n        \"cast\": [\r\n            \"rajni\",\r\n            \"kamal\"\r\n        ],\r\n        \"rating\": \"10\"\r\n    },\r\n    \"name\": \"Doctor\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-correlationid",
+										"value": "12345",
+										"type": "default"
+									},
+									{
+										"key": "headers",
+										"value": "ss",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Doctor\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/delete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Addone",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-correlationid",
+										"value": "12345",
+										"type": "default"
+									},
+									{
+										"key": "headers",
+										"value": "ss",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"releaseDate\":\"12-12-2022\",\r\n    \"genre\":\"thriller\",\r\n   \"cast\":[\"rajni\",\"kamal\"],\r\n   \"rating\":\"9.8\",\r\n   \"name\":\"Doctor\"\r\n   \r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-correlationid",
+										"value": "12345",
+										"type": "default"
+									},
+									{
+										"key": "headers",
+										"value": "ss",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"releaseDate\":\"12-12-2022\",\r\n    \"genre\":\"thriller\",\r\n   \"cast\":[\"rajni\",\"kamal\"],\r\n   \"rating\":\"9.8\",\r\n   \"name\":\"Doctor\"\r\n   \r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/getall",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"getall"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "check",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-correlationid",
+										"value": "12345",
+										"type": "default"
+									},
+									{
+										"key": "headers",
+										"value": "ss",
+										"type": "default"
+									},
+									{
+										"key": "cookie",
+										"value": "session_token=52120e28-1a43-4a2b-8c18-544f69cd5194; Path=/; Expires=Mon, 22 Aug 2022 20:41:08 GMT",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"releaseDate\":\"12-12-2022\",\r\n    \"genre\":\"thriller\",\r\n   \"cast\":[\"rajni\",\"kamal\"],\r\n   \"rating\":\"9.8\",\r\n   \"name\":\"Doctor\"\r\n   \r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/check",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"check"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "signin",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-correlationid",
+										"value": "12345",
+										"type": "default"
+									},
+									{
+										"key": "headers",
+										"value": "ss",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " { \"username\":\"user1\", \"password\":\"password1\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/signin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "refresh Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-correlationid",
+										"value": "12345",
+										"type": "default"
+									},
+									{
+										"key": "headers",
+										"value": "ss",
+										"type": "default"
+									},
+									{
+										"key": "Cookie",
+										"value": "session_token=dc8636bd-a595-4daa-b220-e9ef49a18330; Path=/; Expires=Mon, 22 Aug 2022 20:15:39 GMT",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " { \"username\":\"user1\", \"password\":\"password1\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "refresh",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-correlationid",
+										"value": "12345",
+										"type": "default"
+									},
+									{
+										"key": "headers",
+										"value": "ss",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " { \"username\":\"user1\", \"password\":\"password1\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/refresh",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Dev",
+			"item": [
+				{
+					"name": "CRUD",
+					"item": [
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-correlationid",
+										"value": "12345",
+										"type": "default"
+									},
+									{
+										"key": "headers",
+										"value": "ss",
+										"type": "default"
+									},
+									{
+										"key": "Cookie",
+										"value": "session_token=953cd161-5f2a-4d91-ac3f-1d7b24298c25; Path=/; Expires=Mon, 22 Aug 2022 20:45:28 GMT",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"releaseDate\": \"12-12-2022\",\r\n        \"genre\": \"thriller\",\r\n        \"cast\": [\r\n            \"rajni\",\r\n            \"kamal\"\r\n        ],\r\n        \"rating\": \"10\"\r\n    },\r\n    \"name\": \"Doctor\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://backendmovied.herokuapp.com/api/update",
+									"protocol": "https",
+									"host": [
+										"backendmovied",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-correlationid",
+										"value": "12345",
+										"type": "default"
+									},
+									{
+										"key": "headers",
+										"value": "ss",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Doctor\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://backendmovied.herokuapp.com/api/delete",
+									"protocol": "https",
+									"host": [
+										"backendmovied",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Addone",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-correlationid",
+										"value": "12345",
+										"type": "default"
+									},
+									{
+										"key": "headers",
+										"value": "ss",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"releaseDate\":\"12-12-2022\",\r\n    \"genre\":\"thriller\",\r\n   \"cast\":[\"rajni\",\"kamal\"],\r\n   \"rating\":\"9.8\",\r\n   \"name\":\"Doctor\"\r\n   \r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://backendmovied.herokuapp.com/api/add",
+									"protocol": "https",
+									"host": [
+										"backendmovied",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-correlationid",
+										"value": "12345",
+										"type": "default"
+									},
+									{
+										"key": "headers",
+										"value": "ss",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"releaseDate\":\"12-12-2022\",\r\n    \"genre\":\"thriller\",\r\n   \"cast\":[\"rajni\",\"kamal\"],\r\n   \"rating\":\"9.8\",\r\n   \"name\":\"Doctor\"\r\n   \r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://backendmovied.herokuapp.com/api/getall",
+									"protocol": "https",
+									"host": [
+										"backendmovied",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"getall"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "check",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-correlationid",
+										"value": "12345",
+										"type": "default"
+									},
+									{
+										"key": "headers",
+										"value": "ss",
+										"type": "default"
+									},
+									{
+										"key": "cookie",
+										"value": "session_token=52120e28-1a43-4a2b-8c18-544f69cd5194; Path=/; Expires=Mon, 22 Aug 2022 20:41:08 GMT",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"releaseDate\":\"12-12-2022\",\r\n    \"genre\":\"thriller\",\r\n   \"cast\":[\"rajni\",\"kamal\"],\r\n   \"rating\":\"9.8\",\r\n   \"name\":\"Doctor\"\r\n   \r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://backendmovied.herokuapp.com/api/check",
+									"protocol": "https",
+									"host": [
+										"backendmovied",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"check"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "signin",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-correlationid",
+										"value": "12345",
+										"type": "default"
+									},
+									{
+										"key": "headers",
+										"value": "ss",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " { \"username\":\"user1\", \"password\":\"password1\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://backendmovied.herokuapp.com/api/signin",
+									"protocol": "https",
+									"host": [
+										"backendmovied",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "refresh Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-correlationid",
+										"value": "12345",
+										"type": "default"
+									},
+									{
+										"key": "headers",
+										"value": "ss",
+										"type": "default"
+									},
+									{
+										"key": "Cookie",
+										"value": "session_token=dc8636bd-a595-4daa-b220-e9ef49a18330; Path=/; Expires=Mon, 22 Aug 2022 20:15:39 GMT",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " { \"username\":\"user1\", \"password\":\"password1\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://backendmovied.herokuapp.com/api/logout",
+									"protocol": "https",
+									"host": [
+										"backendmovied",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "refresh",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-correlationid",
+										"value": "12345",
+										"type": "default"
+									},
+									{
+										"key": "headers",
+										"value": "ss",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " { \"username\":\"user1\", \"password\":\"password1\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://backendmovied.herokuapp.com/api/refresh",
+									"protocol": "https",
+									"host": [
+										"backendmovied",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
