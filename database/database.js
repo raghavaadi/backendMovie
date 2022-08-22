@@ -3,7 +3,7 @@ let client;
 let database;
 let movies;
 async function init() {
-  const uri = "";
+  const uri = process.env.MONGODB_URI;
   client = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
