@@ -4,7 +4,6 @@ const db = require("../database/database");
 router.route("/").get(async (req, res) => {
   try {
     let result = await db.getall(req.body).then((resa) => {
-      console.log(resa);
       let response = { data: resa, status: "success" };
       res.status(200).json(response);
     });

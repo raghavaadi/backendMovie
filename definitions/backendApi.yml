@@ -24,6 +24,93 @@ paths:
                 $ref: '#/components/schemas/response'
         '500' :
           description: Internal Server Error
+
+  /api/signin:
+    post:
+      description: add new movie
+      parameters:
+        - $ref: "#/components/parameters/X-correlationid"
+      responses:
+        '200' :
+          description: '"200 ok"'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/responses'
+        '400' :
+          description: Bad Request
+          content :
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response'
+        '500' :
+          description: Internal Server Error
+
+  /api/refresh:
+    post:
+      description: add new movie
+      parameters:
+        - $ref: "#/components/parameters/X-correlationid"
+      responses:
+        '200' :
+          description: '"200 ok"'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/responses'
+        '400' :
+          description: Bad Request
+          content :
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response'
+        '500' :
+          description: Internal Server Error
+
+  
+
+  /api/check:
+    get:
+      description: add new movie
+      parameters:
+        - $ref: "#/components/parameters/X-correlationid"
+      responses:
+        '200' :
+          description: '"200 ok"'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/responses'
+        '400' :
+          description: Bad Request
+          content :
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response'
+        '500' :
+          description: Internal Server Error
+
+  /api/logout:
+    get:
+      description: add new movie
+      parameters:
+        - $ref: "#/components/parameters/X-correlationid"
+      responses:
+        '200' :
+          description: '"200 ok"'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/responses'
+        '400' :
+          description: Bad Request
+          content :
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response'
+        '500' :
+          description: Internal Server Error
+
   /api/delete:
     delete:
       description: add new movie
@@ -37,6 +124,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/responses'
         '400' :
+          description: Bad Request
+          content :
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response'
+        '401' :
           description: Bad Request
           content :
             application/json:
@@ -57,6 +150,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/responses'
         '400' :
+          description: Bad Request
+          content :
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response'
+        '401' :
           description: Bad Request
           content :
             application/json:
